@@ -4,7 +4,7 @@ function curl($url,$data=null,$bearer=null){
 	$h[] = "Content-Type: application/x-www-form-urlencoded";
 	if($bearer != null) $h[] = "Authorization: Bearer ".$bearer;
 	$h[] = "Content-Type: application/x-www-form-urlencoded; charset=UTF-8";
-	$h[] = "User-Agent: Dalvik/2.1.0 (Linux; U; Android 7.1.2; Redmi 4X MIUI/V9.5.10.0.NAMMIFD)";
+	$h[] = "User-Agent: Dalvik/2.1.0 (Linux; U; Android 5.1.1; Andromax B16C2G Build/LMY47V)";
 	$h[] = "Host: apis.uzone.id";
 	$h[] = "Connection: Keep-Alive";
 	$h[] = "Accept-Encoding: gzip";
@@ -16,7 +16,7 @@ function curl($url,$data=null,$bearer=null){
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $h);
 	if($data != null){
-	        curl_setopt($ch, CURLOPT_POST, 5);
+	        curl_setopt($ch, CURLOPT_POST, 1);
         	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 	}
         $asw = curl_exec($ch);
@@ -72,6 +72,7 @@ for($i=0;$i<count($category);$i++){
 		$komen = curl($url,$data,$bearer);
 		print_r($komen);
 		echo "\n";
+		sleep(50); //rubah angka dalam kurung untuk delay
 	}
 }
 }
