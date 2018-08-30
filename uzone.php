@@ -16,7 +16,7 @@ function curl($url,$data=null,$bearer=null){
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $h);
 	if($data != null){
-	        curl_setopt($ch, CURLOPT_POST, 1);
+	        curl_setopt($ch, CURLOPT_POST, 3);
         	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
 	}
         $asw = curl_exec($ch);
