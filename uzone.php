@@ -72,7 +72,7 @@ for($i=0;$i<count($category);$i++){
 		$komen = curl($url,$data,$bearer);
 		print_r($komen);
 		echo "\n";
-		sleep(50); //rubah angka dalam kurung untuk delay
+		sleep(10); //rubah angka dalam kurung untuk delay
 	}
 }
 }
